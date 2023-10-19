@@ -11,7 +11,13 @@ public class Main {
         // System.out.println("The total cost is " + cost);
 
         //To do List app
-        Todo todo = new Todo();
-        todo.todo_app();
+        // Todo todo = new Todo();
+        // todo.todo_app();
+
+        //Merge sort using thread pool 
+        int[] array = {12, 4, 5, 6, 7, 3, 1, 15, 10, 9, 8, 11, 2, 14, 13};
+
+        Threadpoolmergesort threadsort = new Threadpoolmergesort();        
+        threadsort.thread(array);
     }
 }
