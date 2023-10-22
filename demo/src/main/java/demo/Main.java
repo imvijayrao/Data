@@ -15,9 +15,25 @@ public class Main {
         // todo.todo_app();
 
         //Merge sort using thread pool 
-        int[] array = {12, 4, 5, 6, 7, 3, 1, 15, 10, 9, 8, 11, 2, 14, 13};
+        // int[] array = {12, 4, 5, 6, 7, 3, 1, 15, 10, 9, 8, 11, 2, 14, 13};
+        // Threadpoolmergesort threadsort = new Threadpoolmergesort();        
+        // threadsort.thread(array);
 
-        Threadpoolmergesort threadsort = new Threadpoolmergesort();        
-        threadsort.thread(array);
+        //Bank simulation using threads
+        Bank bank = new Bank(1000);
+        Account ac1 = new Account(bank);
+        Account ac2 = new Account(bank);
+        Thread th1 = new Thread(ac1);
+        Thread th2 = new Thread(ac2);
+        th1.start();
+        th2.start();
+        try{
+            th1.join();
+            th2.join();
+        }
+        catch(InterruptedException e){
+            e.printStackTrace();
+        }
+        System.out.println("Final balance: $"+ bank.getbalance());
     }
 }
