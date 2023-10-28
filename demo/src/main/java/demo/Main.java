@@ -20,20 +20,24 @@ public class Main {
         // threadsort.thread(array);
 
         //Bank simulation using threads
-        Bank bank = new Bank(1000);
-        Account ac1 = new Account(bank);
-        Account ac2 = new Account(bank);
-        Thread th1 = new Thread(ac1);
-        Thread th2 = new Thread(ac2);
-        th1.start();
-        th2.start();
-        try{
-            th1.join();
-            th2.join();
-        }
-        catch(InterruptedException e){
-            e.printStackTrace();
-        }
-        System.out.println("Final balance: $"+ bank.getbalance());
+        // Bank bank = new Bank(1000);
+        // Account ac1 = new Account(bank);
+        // Account ac2 = new Account(bank);
+        // Thread th1 = new Thread(ac1);
+        // Thread th2 = new Thread(ac2);
+        // th1.start();
+        // th2.start();
+        // try{
+        //     th1.join();
+        //     th2.join();
+        // }
+        // catch(InterruptedException e){
+        //     e.printStackTrace();
+        // }
+        // System.out.println("Final balance: $"+ bank.getbalance());
+
+        //count_vowels_permutation
+        count_vowels vowelscount = new count_vowels();
+        vowelscount.countvowelPermutation(5);
     }
 }
