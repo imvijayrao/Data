@@ -18,7 +18,7 @@ package demo;
 
 
 public class count_vowels{
-    public int countvowelPermutation(int n){
+    public void countvowelPermutation(int n){
         int mod = 1000000007;
 
         long countA = 1, countE = 1, countI = 1, countO = 1, countU = 1;
@@ -39,6 +39,6 @@ public class count_vowels{
 
         long total = (countA + countE + countI + countO + countU) % mod;
 
-        return (int) total;
+        System.out.println("Permutation of vowels count : " + total);
     }
 }

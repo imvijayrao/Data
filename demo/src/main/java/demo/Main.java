@@ -38,6 +38,6 @@ public class Main {
 
         //count_vowels_permutation
         count_vowels vowelscount = new count_vowels();
-        vowelscount.countvowelPermutation(5);
+        vowelscount.countvowelPermutation(15);
     }
 }
