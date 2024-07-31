@@ -1,5 +1,7 @@
 package demo;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -37,7 +39,24 @@ public class Main {
         // System.out.println("Final balance: $"+ bank.getbalance());
 
         //count_vowels_permutation
-        count_vowels vowelscount = new count_vowels();
-        vowelscount.countvowelPermutation(15);
+        // count_vowels vowelscount = new count_vowels();
+        // vowelscount.countvowelPermutation(15);new
+
+        //File Handler 
+        Scanner sc = new Scanner(System.in);
+        String fileName = sc.nextLine();
+        FileHandler fileHandler = new FileHandler();
+        // fileHandler.fileCreationHandler(fileName); //file Creation
+        // System.out.println("Update your file with......."); //Writing file
+        // String updateFile = sc.nextLine();
+        // fileHandler.fileWriteHandler(fileName, updateFile); new
+        fileHandler.fileReadHandler(fileName); //Reading file
+        // System.out.println("Copy File Name: "); //Copying file
+        // String copyName = sc.nextLine();
+        // fileHandler.fileCopyHandler(fileName, copyName);
+        // fileHandler.filePermissionhandler(fileName); //Permission checker
+        // fileHandler.fileInformationHandler(fileName); //file Information 
+        // fileHandler.fileDeleteHandler(fileName); //Deleting file
+        sc.close();
     }
 }
